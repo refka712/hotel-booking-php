@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotelbuchung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zimmer reservieren</h1>
+        <form id="reservationForm" action="process.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="checkin">Anreisedatum:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Abreisedatum:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="room_type">Zimmertyp:</label>
+            <select id="room_type" name="room_type" required>
+                <option value="Einzelzimmer">Einzelzimmer</option>
+                <option value="Doppelzimmer">Doppelzimmer</option>
+                <option value="Suite">Suite</option>
+            </select>
+
+            <button type="submit">Buchen</button>
+        </form>
+        <p id="message"></p>
+        <p style="text-align:center;"><a href="cancel.php">Buchung stornieren</a></p>
+        <p style="text-align:center;"><a href="display.php">Alle Buchungen anzeigen</a>
+</p>
+
+    </div>
+</body>
+</html>
